@@ -1,0 +1,91 @@
+body {
+    background-color: #000;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo p {
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Blocks section */
+.blocks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.block {
+    background-color: #fff;
+    color: #000;
+    width: 300px;   /* Increased width */
+    height: 300px;  /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px #333;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;  /* Increased font size */
+}
+
+
+/* Printer icon section */
+.printer-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.printer-icon img {
+    width: 80px;
+    height: auto;
+}
