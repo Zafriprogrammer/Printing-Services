@@ -20,6 +20,11 @@ body {
     align-items: center;
     padding: 20px;
     background-color: #111;
+    position: fixed; /* Fixes the header to the top */
+    top: 0; /* Ensures the header stays at the top */
+    width: 100%; /* Makes the header span the full width */
+    z-index: 1000; /* Keeps the header above other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a shadow for better visibility */
 }
 
 .logo {
@@ -54,6 +59,11 @@ nav a {
     text-decoration: none;
 }
 
+/* Content margin adjustment to avoid overlap with fixed header */
+.container {
+    margin-top: 100px; /* Adds space equal to the header's height */
+}
+
 /* Blocks section */
 .blocks {
     display: flex;
@@ -76,7 +86,6 @@ nav a {
     font-weight: bold;
     font-size: 1.5em;  /* Increased font size */
 }
-
 
 /* Printer icon section */
 .printer-icon {
