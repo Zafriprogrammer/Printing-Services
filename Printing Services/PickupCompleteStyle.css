@@ -1,0 +1,107 @@
+body {
+    background-color: #111;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    display: flex; /* Enables Flexbox layout for centering */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Ensures the body takes up the full viewport height */
+    flex-direction: column; /* Ensures items stack vertically */
+}
+
+.header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed; /* Fixes the header at the top */
+    top: 0; /* Position the header at the top */
+    width: 100%; /* Ensures the header spans the full width */
+    z-index: 1000; /* Keeps the header above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow for better visibility */
+}
+
+.container {
+    margin-top: 100px; /* Adds space below the fixed header to prevent overlap with content */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo p {
+    font-weight: bold;
+    color: #fff;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.order-complete {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); /* Darker background to blend with the theme */
+    padding: 40px 60px; /* Increased padding for more space */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added more shadow for a bigger effect */
+    max-width: 600px; /* Increased the max width for a larger block */
+    width: 100%; /* Allows for responsiveness */
+}
+
+h1 {
+    color: #fff; /* White heading for contrast */
+    margin-bottom: 30px; /* Increased margin for more space */
+    font-size: 36px; /* Bigger font size for the heading */
+}
+
+p {
+    font-size: 22px; /* Increased font size */
+    color: #ccc; /* Light grey text for readability */
+    margin-bottom: 30px; /* Increased margin for more space */
+}
+
+button {
+    padding: 15px 30px; /* Increased padding for a larger button */
+    font-size: 18px; /* Bigger font size for the button */
+    color: #fff;
+    background-color: #007BFF; /* Blue button matching header theme */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
