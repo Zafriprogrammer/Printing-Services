@@ -1,51 +1,126 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pick up</title>
-    <link rel="stylesheet" href="PickupStyle.css">
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">
-                <img src="Images/logoprinting.png" alt="Group Archery Logo">
-                <p>GROUP <br> ARCHERY</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="home.html">HOME</a></li>
-                    <li><a href="about_us.html">ABOUT US</a></li>
-                </ul>
-            </nav>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button type="submit">🔍</button>
-            </div> 
-        </div>
-    </div>
-    <div class="maps">
-        <img src="Images/Location.png" alt="location service printing">
-    </div>
-    <div class="navigation">
-    <a href="https://maps.app.goo.gl/DQTLPYjrsvDE8KdR8">
-        <button style="padding: 10px 20px; font-size: 16px; border: none; background-color: #007BFF; color: white; border-radius: 5px; cursor: pointer;">
-            Click to open Google Maps
-        </button>
-        </a>
-    </div>
+body {
+    background-color: #000;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
 
-    <h4>Location Details:</h4>
-    <div class="location-details">
-        <p>Mahallah Faruq, Block E, Room 1.6A</p>
-    </div>
+.header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed; /* Fixes the header at the top */
+    top: 0; /* Position the header at the top */
+    width: 100%; /* Ensures the header spans the full width */
+    z-index: 1000; /* Keeps the header above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow for better visibility */
+}
 
-    <div class="proceed-button" style="text-align: center; margin-top: 20px;">
-        <a href="Order.html" style="text-decoration: none;">
-            <button style="padding: 10px 20px; font-size: 16px; border: none; background-color: #007BFF; color: white; border-radius: 5px; cursor: pointer;">
-                Proceed to Pickup
-            </button>
-        </a>
-    </div>
-</body>
-</html>
+.container {
+    margin-top: 100px; /* Adds space below the fixed header to prevent overlap with content */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo p {
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove any margin */
+}
+
+.maps img {
+    width: 100%; /* Make the image fill the width of the container */
+    max-width: 1000px; /* Increase the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+.navigation {
+    text-align: center;
+    margin: 20px 0; /* Increase spacing above and below */
+}
+
+.navigation button {
+    padding: 20px 40px; /* Larger padding for a bigger button */
+    font-size: 18px; /* Larger font size */
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px; /* Slightly larger rounded corners */
+    cursor: pointer;
+}
+
+h4, h5 {
+    text-align: center;
+    font-size: 20px; /* Increase font size */
+    margin: 20px 0; /* Increase spacing above and below */
+}
+
+.proceed-button {
+    text-align: center;
+    margin-top: 30px; /* Add more spacing above the button */
+}
+
+.proceed-button button {
+    padding: 20px 40px; /* Larger padding for a bigger button */
+    font-size: 18px; /* Larger font size */
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px; /* Slightly larger rounded corners */
+    cursor: pointer;
+}
+
+.location-details {
+    text-align: center; /* Center the text inside the box */
+    margin: 20px auto; /* Increase margin for more spacing */
+    padding: 20px; /* Larger padding inside the box */
+    width: 70%; /* Slightly larger width */
+    max-width: 500px; /* Increase maximum width */
+    background-color: #222; /* Box background color */
+    border: 3px solid #007BFF; /* Thicker border */
+    border-radius: 12px; /* Larger rounded corners */
+    color: #fff; /* Text color */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Enhanced shadow for emphasis */
+}
