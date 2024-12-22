@@ -1,122 +1,51 @@
-body {
-    background-color: #000;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick up</title>
+    <link rel="stylesheet" href="PickupStyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="Images/logoprinting.png" alt="Group Archery Logo">
+                <p>GROUP <br> ARCHERY</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">🔍</button>
+            </div> 
+        </div>
+    </div>
+    <div class="maps">
+        <img src="Images/Location.png" alt="location service printing">
+    </div>
+    <div class="navigation">
+    <a href="https://maps.app.goo.gl/DQTLPYjrsvDE8KdR8">
+        <button style="padding: 10px 20px; font-size: 16px; border: none; background-color: #007BFF; color: white; border-radius: 5px; cursor: pointer;">
+            Click to open Google Maps
+        </button>
+        </a>
+    </div>
 
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    <h4>Location Details:</h4>
+    <div class="location-details">
+        <p>Mahallah Faruq, Block E, Room 1.6A</p>
+    </div>
 
-.header {
-    background-color: #111;
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between logo and nav/search */
-    align-items: center; /* Center items vertically */
-    padding: 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-
-.logo p {
-    font-weight: bold;
-}
-
-.search-bar {
-    display: flex; /* Use flexbox for search bar */
-    align-items: center; /* Center items vertically */
-    margin-right: 20px; /* Add some space between search bar and nav */
-}
-
-nav {
-    display: flex; /* Use flexbox for nav items */
-}
-
-nav ul {
-    display: flex; /* Display list items in a row */
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-}
-
-nav ul li {
-    margin-left: 15px; /* Space between nav items */
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.content {
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.text {
-    float: right;
-    flex: 1;
-    margin-right: 40px;
-}
-
-h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
-}
-
-p {
-    line-height: 1.5;
-}
-
-.image {
-    flex: 1;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-.maps {
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center content horizontally */
-    gap: 10px; /* Space between image and text */
-    margin: 0; /* Remove all outer margins */
-    padding: 0; /* Remove all inner paddings */
-}
-
-.maps img {
-    display: block; /* Prevent inline images from causing gaps */
-    width: 50%; /* Scale the image */
-    max-width: 300px; /* Set a maximum width */
-    height: auto; /* Maintain aspect ratio */
-    border: 2px solid #fff; /* Optional: Add a border */
-    border-radius: 5px; /* Optional: Rounded corners */
-    margin: 0; /* Eliminate any default margin */
-}
-
-body, html {
-    margin: 0; /* Remove margins from the body and root */
-    padding: 0; /* Remove paddings from the body and root */
-    height: 100%; /* Ensure height fills the viewport */
-}
-
-h4, h5 {
-    text-align: center; /* Center align the headings */
-    margin: 5px 0; /* Reduce spacing between headings */
-}
+    <div class="proceed-button" style="text-align: center; margin-top: 20px;">
+        <a href="Order.html" style="text-decoration: none;">
+            <button style="padding: 10px 20px; font-size: 16px; border: none; background-color: #007BFF; color: white; border-radius: 5px; cursor: pointer;">
+                Proceed to Pickup
+            </button>
+        </a>
+    </div>
+</body>
+</html>
