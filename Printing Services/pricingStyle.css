@@ -98,21 +98,24 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 200px;
     position: relative;
 }
 
 .pricing-box {
     background-color: #4d4d4d;
-    width: 500px;
-    height: 500px;
+    width: 40vw; 
+    height: 40vw; 
+    max-width: 650px; 
+    max-height: 650px;
     transform: rotate(45deg);
     position: absolute;
     z-index: -1;
 }
 
+
 .pricing-title {
-    font-size: 30px;
+    font-size: 3vw;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
@@ -120,11 +123,11 @@ nav ul li a {
 
 .pricing-item {
     position: relative;
-    margin: 20px 0;
+    margin: 3vw;
 }
 
 .pricing-item h2 {
-    font-size: 28px;
+    font-size: 2.5vw;
     margin-bottom: 10px;
     color: #2eff8b;
 }
@@ -134,8 +137,9 @@ nav ul li a {
 }
 
 .pricing-item ul li {
-    font-size: 20px;
-    margin: 5px 0;
+    font-size: 2vw;
+    margin: 10px 0;
+    font-weight: bold;
 }
 .pricing-title, .pricing-item h2, .pricing-item li {
     transition: transform 0.3s ease;
