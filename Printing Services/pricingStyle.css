@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,33 +6,31 @@
 }
 
 body {
-    background-color: #0d0d0d;
-    color: white;
+    background-color: #000;
+    color: #fff;
     font-family: sans-serif;
 }
-/* Enlarged Text Class */
-.enlarge {
-    transition: transform 0.3s ease; /* Smooth animation */
-    transform: scale(1.2); /* Enlarge the text */
-    color: #2eff8b; /* Highlighted color */
-    cursor: pointer;
-}
-/* Header Styling */
-.header {
-    background-color: #111;
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between logo and nav/search */
-    align-items: center; /* Center items vertically */
+
+/* Container setup */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     padding: 20px;
 }
 
-
-.header-box {
+/* Header styles */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 0 40px;
+    padding: 20px;
+    background-color: #111;
+    position: fixed; /* Fixed header */
+    top: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Above all other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
@@ -47,28 +46,28 @@ body {
 
 .logo p {
     font-weight: bold;
+    margin: 0;
 }
+
 nav ul {
     display: flex;
     list-style: none;
 }
 
-nav ul li {
-    margin-left: 20px;
+nav li {
+    margin-right: 20px;
 }
 
-nav ul li a {
-    color: white;
+nav a {
+    color: #fff;
     text-decoration: none;
-    font-size: 14px;
-    text-transform: uppercase;
 }
 
 /* Search Bar */
 .search-bar {
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -81,16 +80,21 @@ nav ul li a {
 }
 
 .search-bar button {
-    background-color: #ffffff;
+    background-color: #fff;
     border: none;
-    color: black;
+    color: #000;
     padding: 5px 10px;
     cursor: pointer;
     font-weight: bold;
 }
 
 .search-bar button:hover {
-    background-color: #24c972;
+    background-color: #fff;
+}
+
+/* Adjust content margin for fixed header */
+.container {
+    margin-top: 100px; /* Matches header height */
 }
 
 /* Pricing Section */
@@ -98,24 +102,21 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 50px;
     position: relative;
 }
 
 .pricing-box {
     background-color: #4d4d4d;
-    width: 40vw; 
-    height: 40vw; 
-    max-width: 650px; 
-    max-height: 650px;
+    width: 500px;
+    height: 500px;
     transform: rotate(45deg);
     position: absolute;
     z-index: -1;
 }
 
-
 .pricing-title {
-    font-size: 3vw;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
@@ -123,13 +124,13 @@ nav ul li a {
 
 .pricing-item {
     position: relative;
-    margin: 3vw;
+    margin: 20px 0;
 }
 
 .pricing-item h2 {
-    font-size: 2.5vw;
+    font-size: 28px;
     margin-bottom: 10px;
-    color: #2eff8b;
+    color: #fff;
 }
 
 .pricing-item ul {
@@ -137,10 +138,6 @@ nav ul li a {
 }
 
 .pricing-item ul li {
-    font-size: 2vw;
-    margin: 10px 0;
-    font-weight: bold;
-}
-.pricing-title, .pricing-item h2, .pricing-item li {
-    transition: transform 0.3s ease;
+    font-size: 20px;
+    margin: 5px 0;
 }
