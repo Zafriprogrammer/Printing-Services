@@ -1,16 +1,12 @@
 body {
-    background-color: #111;
-    font-family: sans-serif;
+    font-family:  sans-serif;
     margin: 0;
-    padding: 0;
-    color: #fff;
-    display: flex; /* Enables Flexbox layout for centering */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100vh; /* Ensures the body takes up the full viewport height */
-    flex-direction: column; /* Ensures items stack vertically */
+    padding: 0; /* Removed padding here to avoid conflicts */
+    background-color: #111; /* Same color as the header */
+    color: #fff; /* Adjusted text color for readability */
 }
 
+/* Fixed Header */
 .header {
     background-color: #111;
     display: flex;
@@ -25,12 +21,9 @@ body {
 }
 
 .container {
-    margin-top: 100px; /* Adds space below the fixed header to prevent overlap with content */
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
+    margin-top: 100px; /* Adjust this value to ensure the container is below the header */
+    padding-top: 20px; /* Add padding to push content down */
 }
-
 .logo {
     display: flex;
     align-items: center;
@@ -44,9 +37,14 @@ body {
 
 .logo p {
     font-weight: bold;
-    color: #fff;
 }
 
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    
+}
 .search-bar input {
     padding: 8px;
     font-size: 14px;
@@ -76,7 +74,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 1px;
+    margin-left: 5px;
     transition: background-color 0.3s ease;
 }
 
@@ -100,39 +98,60 @@ nav a {
     text-decoration: none;
 }
 
-.order-complete {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.8); /* Darker background to blend with the theme */
-    padding: 40px 60px; /* Increased padding for more space */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added more shadow for a bigger effect */
-    max-width: 600px; /* Increased the max width for a larger block */
-    width: 100%; /* Allows for responsiveness */
+.order-container {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 60px; /* Adjust this value to ensure the container is below the header */
+    background: #222; /* Slightly lighter shade for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Adjust text color for better readability */
 }
 
 h1 {
-    color: #fff; /* White heading for contrast */
-    margin-bottom: 30px; /* Increased margin for more space */
-    font-size: 36px; /* Bigger font size for the heading */
+    text-align: center;
+    color: #fff; /* Matches the overall color scheme */
 }
 
-p {
-    font-size: 22px; /* Increased font size */
-    color: #ccc; /* Light grey text for readability */
-    margin-bottom: 30px; /* Increased margin for more space */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff; /* Matches the overall color scheme */
+}
+
+input,
+select,
+textarea,
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555; /* Matches the dark theme */
+    border-radius: 5px;
+    background-color: #333; /* Dark background for inputs */
+    color: #fff; /* White text for contrast */
+}
+
+input[type="file"] {
+    padding: 5px;
 }
 
 button {
-    padding: 15px 30px; /* Increased padding for a larger button */
-    font-size: 18px; /* Bigger font size for the button */
-    color: #fff;
-    background-color: #007BFF; /* Blue button matching header theme */
+    background-color: #007BFF;
+    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
+    font-size: 18px; /* Larger button text */
+    padding: 15px; /* More padding for bigger button size */
+    border-radius: 8px; /* Slightly rounder corners */
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
