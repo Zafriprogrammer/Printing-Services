@@ -1,9 +1,18 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="AboutUsStyle.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery Library -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script> <!-- jQuery UI Library -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> <!-- jQuery UI CSS -->
+    <script>
+        $(document).ready(function () {
+            $(".about-us").hide().show("drop", { direction: "down" }, 1000); // Drop effect
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -25,17 +34,13 @@
         </div>
     </div>
 
-
-
     <div class="about-us">
-      <h2>About Us</h2>
-      <ul>
-          <li><strong>Address:</strong> Khawarizmi, Z4.5</li>
-          <li><strong>Email:</strong> saiful123@gmail.com</li>
-          <li><strong>Phone No:</strong> 0142314577</li>
-      </ul>
-  </div>
-  
-    
+        <h2>About Us</h2>
+        <ul>
+            <li><strong>Address:</strong> Khawarizmi, Z4.5</li>
+            <li><strong>Email:</strong> saiful123@gmail.com</li>
+            <li><strong>Phone No:</strong> 0142314577</li>
+        </ul>
+    </div>
 </body>
 </html>
