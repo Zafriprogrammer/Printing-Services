@@ -126,7 +126,7 @@ button {
     padding: 15px 30px; /* Increased padding for a larger button */
     font-size: 18px; /* Bigger font size for the button */
     color: #fff;
-    background-color: #007BFF; /* Blue button matching header theme */
+    background-color: #218838; /* Blue button matching header theme */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -134,5 +134,5 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #218838; /* Darker blue on hover */
 }
