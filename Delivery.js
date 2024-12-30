@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const pages = document.querySelectorAll(".page");
   const locationNextBtn = document.getElementById("location-next");
@@ -5,15 +6,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const paymentNextBtn = document.getElementById("payment-next");
   const paymentDetails = document.getElementById("payment-details");
   const paymentForm = document.getElementById("payment-form");
+  const locationForm = document.getElementById("location-form");
+  const orderForm = document.getElementById("order-form");
 
- 
   function showPage(index) {
     pages.forEach((page, i) => {
       page.classList.toggle("active", i === index);
     });
   }
 
-  
+  function validateForm(form) {
+    if (!form.checkValidity()) {
+      alert("Please fill out all required fields.");
+      return false;
+    }
+    return true;
+  }
+
   paymentForm.addEventListener("change", () => {
     const selectedPayment = document.querySelector('input[name="payment-method"]:checked').value;
 
@@ -28,8 +37,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   
-  locationNextBtn.addEventListener("click", () => showPage(1)); 
-  orderNextBtn.addEventListener("click", () => showPage(2)); 
-  paymentNextBtn.addEventListener("click", () => showPage(3));
+  locationNextBtn.addEventListener("click", () => {
+    if (validateForm(locationForm)) {
+      showPage(1);
+    }
+  });
+
+  
+  orderNextBtn.addEventListener("click", () => {
+    if (validateForm(orderForm)) {
+      showPage(2);
+    }
+  });
+
+  
+  paymentNextBtn.addEventListener("click", () => {
+    if (validateForm(paymentForm)) {
+      showPage(3);
+    }
+  });
 });
 
