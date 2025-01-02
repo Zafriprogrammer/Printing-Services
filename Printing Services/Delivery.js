@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       paymentDetails.classList.remove("hidden");
     } else if (selectedPayment === "QR Code") {
       paymentDetails.innerHTML = `<p>Scan this QR Code to complete your payment:</p>
-                                  <img src="QRpay.jpg" alt="C:\Users\Abdullah\Downloads">`;
+                                  <img src="Images/QRpay.jpeg" alt="">`;
       paymentDetails.classList.remove("hidden");
     }
   });
