@@ -1,0 +1,195 @@
+body {
+  background-color: #000;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.header {
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  margin-top: 100px; 
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo p {
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.search-bar input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #fff; /* White background for the input */
+    color: #000; /* Black text color for the input */
+    outline: none; /* Removes the default focus outline */
+    width: 250px; /* Sets the width of the input field */
+    transition: border-color 0.3s ease; /* Smooth transition for the border color on focus or hover */
+}
+
+.search-bar input::placeholder {
+    color: #888; /* Light gray color for placeholder text */
+}
+
+.search-bar input:focus {
+    border-color: #007BFF; /* Blue border when input is focused */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow effect when input is focused */
+}
+
+.search-bar button {
+    padding: 8px;
+    font-size: 14px;
+    background-color: white;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 50px;
+    transition: background-color 0.3s ease; /* Transition for background color change on hover */
+}
+
+.search-bar button:hover {
+    background-color: #0056b3; /* Darker blue background on hover for the button */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-left: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Page Sections */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.1px;
+}
+
+input, select, textarea, button {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+input[type="file"] {
+  padding: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Payment Method Section */
+#payment-details {
+  margin-top: 10px;
+}
+
+#payment-details img {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.order-complete {
+  text-align: center;
+}
+
+.order-complete h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.order-complete p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.order-complete button {
+  background-color: #28a745;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.order-complete button:hover {
+  background-color: #218838;
+}
+
+#app {
+  padding-top: 100px; 
+  margin-top: 60px; 
+}
