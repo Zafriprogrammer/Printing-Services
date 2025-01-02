@@ -43,20 +43,20 @@ body {
     font-size: 14px;
     border: 1px solid #555;
     border-radius: 5px;
-    background-color: #fff; /* White background */
-    color: #000; /* Black text */
-    outline: none; /* Removes default focus outline */
-    width: 250px; /* Adjust width as needed */
-    transition: border-color 0.3s ease; /* Smooth transition for hover or focus */
+    background-color: #fff; 
+    color: #000; 
+    outline: none; 
+    width: 250px; 
+    transition: border-color 0.3s ease; 
 }
 
 .search-bar input::placeholder {
-    color: #888; /* Light gray placeholder text */
+    color: #888; 
 }
 
 .search-bar input:focus {
-    border-color: #007BFF; /* Blue border on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow on focus */
+    border-color: #007BFF; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
 .search-bar button {
