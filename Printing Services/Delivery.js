@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please fill out all required fields.");
       return false;
     }
-    return true;
-  }
+    return true;
+  }
 
   paymentForm.addEventListener("change", () => {
     const selectedPayment = document.querySelector('input[name="payment-method"]:checked').value;
 
     if (selectedPayment === "Bank Transfer") {
-      paymentDetails.innerHTML = <p>Bank Account Number: <strong class="account-number">4000001110000111</strong></p>;
+      paymentDetails.innerHTML = `<p>Bank Account Number: <strong class="account-number">4000001110000111</strong></p>`;
       paymentDetails.classList.remove("hidden");
     } else if (selectedPayment === "QR Code") {
       paymentDetails.innerHTML = `<p>Scan this QR Code to complete your payment:</p>
