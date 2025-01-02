@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedPayment = document.querySelector('input[name="payment-method"]:checked').value;
 
     if (selectedPayment === "Bank Transfer") {
-      paymentDetails.innerHTML = `<p>Bank Account Number: <strong class="account-number">4000001110000111</strong></p>`;
+      paymentDetails.innerHTML = `<p>Bank Account Number: <strong class="account-number">1622 0035 3205</strong></p>`;
       paymentDetails.classList.remove("hidden");
     } else if (selectedPayment === "QR Code") {
       paymentDetails.innerHTML = `<p>Scan this QR Code to complete your payment:</p>
-                                  <img src="qr-code-placeholder.png" alt="DelivryQr.png">`;
+                                  <img src="QRpay.jpg" alt="C:\Users\Abdullah\Downloads">`;
       paymentDetails.classList.remove("hidden");
     }
   });
