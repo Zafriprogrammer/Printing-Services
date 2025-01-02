@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,6 @@ body {
     font-family: sans-serif;
 }
 
-/* Container setup */
 .container {
     display: flex;
     flex-direction: column;
@@ -19,17 +18,16 @@ body {
     padding: 20px;
 }
 
-/* Header styles */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: #111;
-    position: fixed; /* Fixed header */
+    position: fixed; 
     top: 0;
-    width: 100%; /* Full width */
-    z-index: 1000; /* Above all other elements */
+    width: 100%; 
+    z-index: 1000; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -68,20 +66,20 @@ nav a {
     font-size: 14px;
     border: 1px solid #555;
     border-radius: 5px;
-    background-color: #fff; /* White background */
-    color: #000; /* Black text */
-    outline: none; /* Removes default focus outline */
-    width: 250px; /* Adjust width as needed */
-    transition: border-color 0.3s ease; /* Smooth transition for hover or focus */
+    background-color: #fff; 
+    color: #000; 
+    outline: none; 
+    width: 250px; 
+    transition: border-color 0.3s ease; 
 }
 
 .search-bar input::placeholder {
-    color: #888; /* Light gray placeholder text */
+    color: #888; 
 }
 
 .search-bar input:focus {
-    border-color: #007BFF; /* Blue border on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow on focus */
+    border-color: #007BFF; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
 .search-bar button {
@@ -100,12 +98,10 @@ nav a {
     background-color: #0056b3;
 }
 
-/* Adjust content margin for fixed header */
 .container {
-    margin-top: 100px; /* Matches header height */
+    margin-top: 100px; 
 }
 
-/* Pricing Section */
 .pricing-container {
     display: flex;
     flex-direction: column;
