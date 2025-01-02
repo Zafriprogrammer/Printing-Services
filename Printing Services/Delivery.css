@@ -49,20 +49,20 @@ body {
     font-size: 14px;
     border: 1px solid #555;
     border-radius: 5px;
-    background-color: #fff; /* White background for the input */
-    color: #000; /* Black text color for the input */
-    outline: none; /* Removes the default focus outline */
-    width: 250px; /* Sets the width of the input field */
-    transition: border-color 0.3s ease; /* Smooth transition for the border color on focus or hover */
+    background-color: #fff; 
+    color: #000; 
+    outline: none; 
+    width: 250px;
+    transition: border-color 0.3s ease; 
 }
 
 .search-bar input::placeholder {
-    color: #888; /* Light gray color for placeholder text */
+    color: #888; 
 }
 
 .search-bar input:focus {
-    border-color: #007BFF; /* Blue border when input is focused */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow effect when input is focused */
+    border-color: #007BFF; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
 .search-bar button {
@@ -74,11 +74,11 @@ body {
     border-radius: 5px;
     cursor: pointer;
     margin-right: 50px;
-    transition: background-color 0.3s ease; /* Transition for background color change on hover */
+    transition: background-color 0.3s ease; 
 }
 
 .search-bar button:hover {
-    background-color: #0056b3; /* Darker blue background on hover for the button */
+    background-color: #0056b3; 
 }
 
 nav ul {
@@ -97,7 +97,7 @@ nav a {
   text-decoration: none;
 }
 
-/* Page Sections */
+
 .page {
   display: none;
 }
@@ -152,7 +152,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Payment Method Section */
+
 #payment-details {
   margin-top: 10px;
 }
