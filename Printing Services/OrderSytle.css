@@ -1,28 +1,27 @@
 body {
     font-family:  sans-serif;
     margin: 0;
-    padding: 0; /* Removed padding here to avoid conflicts */
-    background-color: #111; /* Same color as the header */
-    color: #fff; /* Adjusted text color for readability */
+    padding: 0; 
+    background-color: #111; 
+    color: #fff; 
 }
 
-/* Fixed Header */
 .header {
     background-color: #111;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: fixed; /* Fixes the header at the top */
-    top: 0; /* Position the header at the top */
-    width: 100%; /* Ensures the header spans the full width */
-    z-index: 1000; /* Keeps the header above other content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow for better visibility */
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
 .container {
-    margin-top: 100px; /* Adjust this value to ensure the container is below the header */
-    padding-top: 20px; /* Add padding to push content down */
+    margin-top: 100px; 
+    padding-top: 20px; 
 }
 .logo {
     display: flex;
@@ -50,20 +49,20 @@ body {
     font-size: 14px;
     border: 1px solid #555;
     border-radius: 5px;
-    background-color: #fff; /* White background */
-    color: #000; /* Black text */
-    outline: none; /* Removes default focus outline */
-    width: 250px; /* Adjust width as needed */
-    transition: border-color 0.3s ease; /* Smooth transition for hover or focus */
+    background-color: #fff; 
+    color: #000; 
+    outline: none; 
+    width: 250px; 
+    transition: border-color 0.3s ease; 
 }
 
 .search-bar input::placeholder {
-    color: #888; /* Light gray placeholder text */
+    color: #888; 
 }
 
 .search-bar input:focus {
-    border-color: #007BFF; /* Blue border on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow on focus */
+    border-color: #007BFF; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
 .search-bar button {
@@ -101,17 +100,17 @@ nav a {
 .order-container {
     max-width: 500px;
     margin: auto;
-    margin-top: 60px; /* Adjust this value to ensure the container is below the header */
-    background: #222; /* Slightly lighter shade for contrast */
+    margin-top: 60px; 
+    background: #222; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    color: #fff; /* Adjust text color for better readability */
+    color: #fff; 
 }
 
 h1 {
     text-align: center;
-    color: #fff; /* Matches the overall color scheme */
+    color: #fff; 
 }
 
 form {
@@ -123,7 +122,7 @@ form {
 label {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #fff; /* Matches the overall color scheme */
+    color: #fff; 
 }
 
 input,
@@ -132,10 +131,10 @@ textarea,
 button {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #555; /* Matches the dark theme */
+    border: 1px solid #555; 
     border-radius: 5px;
-    background-color: #333; /* Dark background for inputs */
-    color: #fff; /* White text for contrast */
+    background-color: #333; 
+    color: #fff; 
 }
 
 input[type="file"] {
@@ -147,9 +146,9 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 18px; /* Larger button text */
-    padding: 15px; /* More padding for bigger button size */
-    border-radius: 8px; /* Slightly rounder corners */
+    font-size: 18px; 
+    padding: 15px; 
+    border-radius: 8px; 
 }
 
 button:hover {
