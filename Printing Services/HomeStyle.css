@@ -14,18 +14,18 @@ body {
     padding: 20px;
 }
 
-/* Header styles */
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: #111;
-    position: fixed; /* Fixes the header to the top */
-    top: 0; /* Ensures the header stays at the top */
-    width: 100%; /* Makes the header span the full width */
-    z-index: 1000; /* Keeps the header above other elements */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a shadow for better visibility */
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
 .logo {
@@ -49,20 +49,20 @@ body {
     font-size: 14px;
     border: 1px solid #555;
     border-radius: 5px;
-    background-color: #fff; /* White background */
-    color: #000; /* Black text */
-    outline: none; /* Removes default focus outline */
-    width: 250px; /* Adjust width as needed */
-    transition: border-color 0.3s ease; /* Smooth transition for hover or focus */
+    background-color: #fff; 
+    color: #000; 
+    outline: none; 
+    width: 250px; 
+    transition: border-color 0.3s ease; 
 }
 
 .search-bar input::placeholder {
-    color: #888; /* Light gray placeholder text */
+    color: #888; 
 }
 
 .search-bar input:focus {
-    border-color: #007BFF; /* Blue border on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow on focus */
+    border-color: #007BFF; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
 .search-bar button {
@@ -97,12 +97,11 @@ nav a {
     text-decoration: none;
 }
 
-/* Content margin adjustment to avoid overlap with fixed header */
 .container {
-    margin-top: 100px; /* Adds space equal to the header's height */
+    margin-top: 100px; 
 }
 
-/* Blocks section */
+
 .blocks {
     display: flex;
     justify-content: space-around;
@@ -113,8 +112,8 @@ nav a {
 .block {
     background-color: #fff;
     color: #000;
-    width: 300px;   /* Increased width */
-    height: 300px;  /* Increased height */
+    width: 300px;   
+    height: 300px;  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,10 +121,9 @@ nav a {
     box-shadow: 10px 10px 0px #333;
     text-align: center;
     font-weight: bold;
-    font-size: 1.5em;  /* Increased font size */
+    font-size: 1.5em;  
 }
 
-/* Printer icon section */
 .printer-icon {
     position: fixed;
     bottom: 30px;
