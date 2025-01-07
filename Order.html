@@ -69,7 +69,6 @@
         document.querySelector("#orderForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Collect form data
     const orderData = {
         name: document.querySelector("input[name='name']").value,
         phone: document.querySelector("input[name='phone']").value,
@@ -79,13 +78,10 @@
         quality: document.querySelector("select[name='quality']").value,
     };
 
-    // Retrieve existing orders from local storage
     const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
 
-    // Add new order to the existing list
     existingOrders.push(orderData);
 
-    // Save back to local storage
     localStorage.setItem("orders", JSON.stringify(existingOrders));
 
     alert("Order saved!");
