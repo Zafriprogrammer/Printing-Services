@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Orders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        #ordersContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .order-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            transition: transform 0.2s;
+        }
+
+        .order-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .order-card h2 {
+            margin: 0 0 10px;
+            color: #007BFF;
+        }
+
+        .order-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .no-orders {
+            text-align: center;
+            color: #999;
+            font-size: 18px;
+        }
+
+        .completed-button {
+            background-color: #FF4D4D;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+            text-align: center;
+        }
+
+        .completed-button:hover {
+            background-color: #FF3333;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Orders</h1>
+    <div id="ordersContainer"></div>
+
+    <script>
+        // Retrieve orders from local storage
+        let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+        // Display orders
+        const container = document.querySelector("#ordersContainer");
+        function renderOrders() {
+            container.innerHTML = ""; // Clear container
+            if (orders.length > 0) {
+                orders.forEach((order, index) => {
+                    const orderElement = document.createElement("div");
+                    orderElement.className = "order-card";
+                    orderElement.innerHTML = `
+                        <h2>Order ${index + 1}</h2>
+                        <p><strong>Name:</strong> ${order.name}</p>
+                        <p><strong>Phone:</strong> ${order.phone}</p>
+                        <p><strong>Page Size:</strong> ${order.pageSize}</p>
+                        <p><strong>Ink Type:</strong> ${order.inkType}</p>
+                        <p><strong>Quantity:</strong> ${order.quantity}</p>
+                        <p><strong>Quality:</strong> ${order.quality}</p>
+                        <button class="completed-button" data-index="${index}">Completed</button>
+                    `;
+                    container.appendChild(orderElement);
+                });
+
+                // Add event listeners to "Completed" buttons
+                document.querySelectorAll(".completed-button").forEach((button) => {
+                    button.addEventListener("click", function () {
+                        const orderIndex = this.getAttribute("data-index");
+                        const confirmDelete = confirm(
+                            "Are you sure you want to mark this order as completed? This will delete it permanently."
+                        );
+                        if (confirmDelete) {
+                            // Remove order from orders array
+                            orders.splice(orderIndex, 1);
+                            // Update local storage
+                            localStorage.setItem("orders", JSON.stringify(orders));
+                            // Re-render orders
+                            renderOrders();
+                            alert("Order marked as completed and deleted.");
+                        }
+                    });
+                });
+            } else {
+                container.innerHTML = `<p class="no-orders">No orders found.</p>`;
+            }
+        }
+
+        // Initial render
+        renderOrders();
+    </script>
+</body>
+</html>

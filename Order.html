@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER</title>
+    <link rel="stylesheet" href="OrderSytle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="Images/logoprinting.png" alt="Group Archery Logo">
+                <p>GROUP <br> ARCHERY</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">🔍</button>
+            </div> 
+        </div>
+    </div>
+    
+    <div class="order-container">
+        <h1>ORDER</h1>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+            <label for="page-size">Page Size:</label>
+            <select id="page-size" name="page-size" required>
+                <option value="">Select a page size</option>
+                <option value="A4">A4</option>
+            </select>
+
+            <label for="ink-type">Ink Type:</label>
+            <select id="ink-type" name="ink-type" required>
+                <option value="">Select ink type</option>
+                <option value="Black and White">Black and White</option>
+                <option value="Color">Color</option>
+            </select>
+
+            <label for="quality">Quality:</label>
+            <select id="quality" name="quality" required>
+                <option value="">Select quality</option>
+                <option value="Standard">Standard</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required placeholder="Enter quantity">
+
+            <label for="file-upload">Upload File:</label>
+            <input type="file" id="file-upload" name="file-upload" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+     <script>
+        document.querySelector("#orderForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Collect form data
+    const orderData = {
+        name: document.querySelector("input[name='name']").value,
+        phone: document.querySelector("input[name='phone']").value,
+        pageSize: document.querySelector("select[name='page-size']").value,
+        inkType: document.querySelector("select[name='ink-type']").value,
+        quantity: document.querySelector("input[name='quantity']").value,
+        quality: document.querySelector("select[name='quality']").value,
+    };
+
+    // Retrieve existing orders from local storage
+    const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    // Add new order to the existing list
+    existingOrders.push(orderData);
+
+    // Save back to local storage
+    localStorage.setItem("orders", JSON.stringify(existingOrders));
+
+    alert("Order saved!");
+	window.location.href = "PickupComplete.html";
+});
+    </script>
+</body>
+</html>
