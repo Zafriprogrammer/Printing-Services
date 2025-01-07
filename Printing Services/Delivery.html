@@ -96,13 +96,97 @@
             <button type="button" id="payment-next">Next</button>
           </form>
         </section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Reference to forms and elements
+  const deliveryForm = document.querySelector("#location-form");
+  const orderForm = document.querySelector("#order-form");
+  const paymentForm = document.querySelector("#payment-form");
+  const pages = document.querySelectorAll(".page");
+  const locationNextBtn = document.getElementById("location-next");
+  const orderNextBtn = document.getElementById("order-next");
+  const paymentNextBtn = document.getElementById("payment-next");
+  const goHomeBtn = document.getElementById("go-home");
+
+  let orderData = {}; // Object to hold order details
+
+  // Helper to navigate between pages
+  function navigateToPage(index) {
+    pages.forEach((page, i) => {
+      page.classList.toggle("active", i === index);
+    });
+  }
+
+  // Helper to validate a form
+  function validateForm(form) {
+    if (!form.checkValidity()) {
+      alert("Please fill out all required fields.");
+      return false;
+    }
+    return true;
+  }
+
+  // Save order details to localStorage
+  function saveOrderData() {
+  const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
+  orderData.orderType = "Delivery"; // Mark the order as a delivery
+  existingOrders.push(orderData);
+  localStorage.setItem("orders", JSON.stringify(existingOrders));
+}
+
+  // Event handler for delivery form
+  locationNextBtn.addEventListener("click", () => {
+    if (validateForm(deliveryForm)) {
+      // Collect delivery data
+      orderData.mahallah = document.querySelector("#mahallah").value;
+      orderData.block = document.querySelector("#block").value;
+      orderData.room = document.querySelector("#room").value;
+      orderData.name = document.querySelector("#name").value;
+      orderData.phone = document.querySelector("#phone").value;
+      navigateToPage(1); // Go to the order page
+    }
+  });
+
+  // Event handler for order form
+  orderNextBtn.addEventListener("click", () => {
+    if (validateForm(orderForm)) {
+      // Collect order data
+      orderData.pageSize = document.querySelector("#page-size").value;
+      orderData.inkType = document.querySelector("#ink-type").value;
+      orderData.quality = document.querySelector("#quality").value;
+      orderData.quantity = document.querySelector("#quantity").value;
+      navigateToPage(2); // Go to the payment page
+    }
+  });
+
+  // Event handler for payment form
+  paymentNextBtn.addEventListener("click", () => {
+    if (validateForm(paymentForm)) {
+      // Collect payment data
+      const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+      orderData.paymentMethod = paymentMethod;
+
+      // Save the order data
+      saveOrderData();
+
+      // Navigate to the "Order Complete" page
+      navigateToPage(3);
+    }
+  });
+});
+</script>
+
   
         <section id="complete" class="page">
           <div class="order-complete">
             <h1>ORDER COMPLETE</h1>
-            <p>We are processing your order. We will inform you soon!</p>
-            <p>Please note: We accept cash only.</p>
-            <button onclick="window.location.href='../home.html'">Go to Home</button>
+            <p>We are processing your order. We will inform you soon!</p>            <button id="go-home">Go to Home</button>
+<script>
+    document.getElementById("go-home").addEventListener("click", () => {
+        window.location.href = "home.html";
+    });
+</script>
+
           </div>
         </section>
       </main>
