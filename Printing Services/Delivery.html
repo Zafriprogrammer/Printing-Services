@@ -108,16 +108,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const paymentNextBtn = document.getElementById("payment-next");
   const goHomeBtn = document.getElementById("go-home");
 
-  let orderData = {}; // Object to hold order details
+  let orderData = {}; 
 
-  // Helper to navigate between pages
   function navigateToPage(index) {
     pages.forEach((page, i) => {
       page.classList.toggle("active", i === index);
     });
   }
 
-  // Helper to validate a form
   function validateForm(form) {
     if (!form.checkValidity()) {
       alert("Please fill out all required fields.");
@@ -126,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return true;
   }
 
-  // Save order details to localStorage
   function saveOrderData() {
   const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
   orderData.orderType = "Delivery"; // Mark the order as a delivery
@@ -134,42 +131,34 @@ document.addEventListener("DOMContentLoaded", () => {
   localStorage.setItem("orders", JSON.stringify(existingOrders));
 }
 
-  // Event handler for delivery form
   locationNextBtn.addEventListener("click", () => {
     if (validateForm(deliveryForm)) {
-      // Collect delivery data
       orderData.mahallah = document.querySelector("#mahallah").value;
       orderData.block = document.querySelector("#block").value;
       orderData.room = document.querySelector("#room").value;
       orderData.name = document.querySelector("#name").value;
       orderData.phone = document.querySelector("#phone").value;
-      navigateToPage(1); // Go to the order page
+      navigateToPage(1); 
     }
   });
 
-  // Event handler for order form
   orderNextBtn.addEventListener("click", () => {
     if (validateForm(orderForm)) {
-      // Collect order data
       orderData.pageSize = document.querySelector("#page-size").value;
       orderData.inkType = document.querySelector("#ink-type").value;
       orderData.quality = document.querySelector("#quality").value;
       orderData.quantity = document.querySelector("#quantity").value;
-      navigateToPage(2); // Go to the payment page
+      navigateToPage(2);
     }
   });
 
-  // Event handler for payment form
   paymentNextBtn.addEventListener("click", () => {
     if (validateForm(paymentForm)) {
-      // Collect payment data
       const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
       orderData.paymentMethod = paymentMethod;
 
-      // Save the order data
       saveOrderData();
 
-      // Navigate to the "Order Complete" page
       navigateToPage(3);
     }
   });
