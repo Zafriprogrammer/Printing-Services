@@ -66,11 +66,28 @@
     </div>
 
     <script>
-        document.getElementById('orderForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            alert('Form submitted successfully!'); 
-            window.location.href = "PickupComplete.html"; 
-        });
-    </script>
+    document.querySelector("#orderForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const orderData = {
+            name: document.querySelector("input[name='name']").value,
+            phone: document.querySelector("input[name='phone']").value,
+            pageSize: document.querySelector("select[name='page-size']").value,
+            inkType: document.querySelector("select[name='ink-type']").value,
+            quantity: document.querySelector("input[name='quantity']").value,
+            quality: document.querySelector("select[name='quality']").value,
+            orderType: "Pickup" 
+        };
+
+        const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
+
+        existingOrders.push(orderData);
+
+        localStorage.setItem("orders", JSON.stringify(existingOrders));
+
+        alert("Order saved!");
+        window.location.href = "PickupComplete.html";
+    });
+</script>
 </body>
 </html>
