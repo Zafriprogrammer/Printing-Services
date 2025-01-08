@@ -83,13 +83,16 @@
         let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
         const container = document.querySelector("#ordersContainer");
+
         function renderOrders() {
             container.innerHTML = ""; 
             if (orders.length > 0) {
                 orders.forEach((order, index) => {
                     const orderElement = document.createElement("div");
                     orderElement.className = "order-card";
-                    orderElement.innerHTML = `
+
+                    // Default order details
+                    let orderContent = `
                         <h2>Order ${index + 1}</h2>
                         <p><strong>Name:</strong> ${order.name}</p>
                         <p><strong>Phone:</strong> ${order.phone}</p>
@@ -98,11 +101,27 @@
                         <p><strong>Quantity:</strong> ${order.quantity}</p>
                         <p><strong>Quality:</strong> ${order.quality}</p>
                         <p><strong>Order Type:</strong> ${order.orderType}</p>
+                    `;
+
+                    // Add delivery-specific details
+                    if (order.orderType === "Delivery") {
+                        orderContent += `
+                            <p><strong>Mahallah:</strong> ${order.mahallah}</p>
+                            <p><strong>Block:</strong> ${order.block}</p>
+                            <p><strong>Room No.:</strong> ${order.room}</p>
+                        `;
+                    }
+
+                    // Add the "Completed" button
+                    orderContent += `
                         <button class="completed-button" data-index="${index}">Completed</button>
                     `;
+
+                    orderElement.innerHTML = orderContent;
                     container.appendChild(orderElement);
                 });
 
+                // Add event listeners for "Completed" buttons
                 document.querySelectorAll(".completed-button").forEach((button) => {
                     button.addEventListener("click", function () {
                         const orderIndex = this.getAttribute("data-index");
