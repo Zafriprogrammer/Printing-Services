@@ -1,47 +1,51 @@
+/* General Body Styling */
 body {
-  background-color: #000;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #fff;
+    background-color: #000;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
 }
 
+/* Header Styling */
 .header {
-  background-color: #111;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  position: fixed; 
-  top: 0; 
-  width: 100%; 
-  z-index: 1000; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .container {
-  margin-top: 100px; 
+    margin-top: 100px;
 }
 
+/* Logo Section */
 .logo {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
 }
 
 .logo p {
-  font-weight: bold;
+    font-weight: bold;
 }
 
+/* Search Bar */
 .search-bar {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .search-bar input {
@@ -49,20 +53,20 @@ body {
     font-size: 14px;
     border: 1px solid #555;
     border-radius: 5px;
-    background-color: #fff; 
-    color: #000; 
-    outline: none; 
+    background-color: #fff;
+    color: #000;
+    outline: none;
     width: 250px;
-    transition: border-color 0.3s ease; 
+    transition: border-color 0.3s ease;
 }
 
 .search-bar input::placeholder {
-    color: #888; 
+    color: #888;
 }
 
 .search-bar input:focus {
-    border-color: #007BFF; 
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .search-bar button {
@@ -74,122 +78,124 @@ body {
     border-radius: 5px;
     cursor: pointer;
     margin-right: 50px;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
 
 .search-bar button:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3;
 }
 
+/* Navigation */
 nav ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-  margin-left: 15px;
+    margin-left: 15px;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
-
+/* Pages */
 .page {
-  display: none;
+    display: none;
 }
 
 .page.active {
-  display: block;
+    display: block;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
+/* Form Styles */
 form {
-  max-width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 label {
-  font-weight: bold;
-  margin-bottom: 0.1px;
+    font-weight: bold;
+    margin-bottom: 0.1px;
 }
 
-input, select, textarea, button {
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background-color: #333;
-  color: #fff;
+input,
+select,
+textarea,
+button {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
 }
 
 input[type="file"] {
-  padding: 5px;
+    padding: 5px;
 }
 
 button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 15px;
-  border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 8px;
 }
 
 button:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
-
+/* Payment Details */
 #payment-details {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 #payment-details img {
-  width: 200px;
-  height: auto;
-  margin-top: 10px;
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
 }
 
+/* Order Complete Section */
 .order-complete {
-  text-align: center;
+    text-align: center;
 }
 
 .order-complete h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
 .order-complete p {
-  font-size: 18px;
-  margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .order-complete button {
-  background-color: #28a745;
-  padding: 15px;
-  font-size: 18px;
-  border-radius: 8px;
-  margin-top: 20px;
+    background-color: #28a745;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 .order-complete button:hover {
-  background-color: #218838;
+    background-color: #218838;
 }
 
-#app {
-  padding-top: 100px; 
-  margin-top: 60px; 
+/* Adjustments for Smaller Screens */
+@media (max-width: 600px) {
+    .search-bar input {
+        width: 150px;
+    }
 }
