@@ -9,8 +9,14 @@ body {
     background-color: #000;
     color: #fff;
     font-family: sans-serif;
+    font-weight: bold;
 }
-
+.enlarge {
+    transition: transform 0.3s ease;
+    transform: scale(1.2); 
+    color: #2eff8b; 
+    cursor: pointer;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -61,43 +67,6 @@ nav a {
     text-decoration: none;
 }
 
-.search-bar input {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #555;
-    border-radius: 5px;
-    background-color: #fff; 
-    color: #000; 
-    outline: none; 
-    width: 250px; 
-    transition: border-color 0.3s ease; 
-}
-
-.search-bar input::placeholder {
-    color: #888; 
-}
-
-.search-bar input:focus {
-    border-color: #007BFF; 
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
-}
-
-.search-bar button {
-    padding: 8px;
-    font-size: 14px;
-    background-color: white;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 1px;
-    transition: background-color 0.3s ease;
-}
-
-.search-bar button:hover {
-    background-color: #0056b3;
-}
-
 .container {
     margin-top: 100px; 
 }
@@ -117,6 +86,15 @@ nav a {
     transform: rotate(45deg);
     position: absolute;
     z-index: -1;
+    transition: transform 0.3s ease; 
+    background: rgba(46, 204, 113, 0.2); 
+    box-shadow: 
+        0 0 10px #2ecc71, 
+        0 0 20px #2ecc71, 
+        0 0 40px #2ecc71, 
+        0 0 80px #2ecc71; 
+    border: 2px solid #2ecc71;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .pricing-title {
