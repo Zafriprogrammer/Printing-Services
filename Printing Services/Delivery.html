@@ -98,7 +98,6 @@
         </section>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Reference to forms and elements
   const deliveryForm = document.querySelector("#location-form");
   const orderForm = document.querySelector("#order-form");
   const paymentForm = document.querySelector("#payment-form");
@@ -169,12 +168,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <section id="complete" class="page">
           <div class="order-complete">
             <h1>ORDER COMPLETE</h1>
-            <p>We are processing your order. We will inform you soon!</p>            <button id="go-home">Go to Home</button>
-<script>
-    document.getElementById("go-home").addEventListener("click", () => {
-        window.location.href = "home.html";
-    });
-</script>
+            <p>We are processing your order. We will inform you soon!</p>           
+<a href="home.html" id="go-home" style="text-decoration: none; padding: 10px 20px; background-color: #007BFF; color: white; border-radius: 5px; display: inline-block; text-align: center;">Go to Home</a>
+
 
           </div>
         </section>
