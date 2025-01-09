@@ -47,48 +47,14 @@ body {
     color: #fff;
 }
 
-.search-bar input {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #555;
-    border-radius: 5px;
-    background-color: #fff; 
-    color: #000; 
-    outline: none; 
-    width: 250px; 
-    transition: border-color 0.3s ease; 
-}
 
-.search-bar input::placeholder {
-    color: #888;
-}
-
-.search-bar input:focus {
-    border-color: #007BFF; 
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
-}
-
-.search-bar button {
-    padding: 8px;
-    font-size: 14px;
-    background-color: white;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 1px;
-    transition: background-color 0.3s ease;
-}
-
-.search-bar button:hover {
-    background-color: #0056b3;
-}
 
 nav ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-right: 40px;
 }
 
 nav ul li {
