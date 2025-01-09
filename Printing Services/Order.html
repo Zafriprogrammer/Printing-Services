@@ -1,116 +1,90 @@
-body {
-    font-family:  sans-serif;
-    margin: 0;
-    padding: 0; 
-    background-color: #111; 
-    color: #fff; 
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER</title>
+    <link rel="stylesheet" href="OrderSytle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="Images/logoprinting.png" alt="Group Archery Logo">
+                <p>GROUP <br> ARCHERY</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                </ul>
+            </nav>
+         
+        </div>
+    </div>
+    
+    <div class="order-container">
+        <h1>ORDER</h1>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
 
-.header {
-    background-color: #111;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
-}
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
 
-.container {
-    margin-top: 100px; 
-    padding-top: 20px; 
-}
-.logo {
-    display: flex;
-    align-items: center;
-}
+            <label for="page-size">Page Size:</label>
+            <select id="page-size" name="page-size" required>
+                <option value="">Select a page size</option>
+                <option value="A4">A4</option>
+            </select>
 
-.logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
+            <label for="ink-type">Ink Type:</label>
+            <select id="ink-type" name="ink-type" required>
+                <option value="">Select ink type</option>
+                <option value="Black and White">Black and White</option>
+                <option value="Color">Color</option>
+            </select>
 
-.logo p {
-    font-weight: bold;
-}
+            <label for="quality">Quality:</label>
+            <select id="quality" name="quality" required>
+                <option value="">Select quality</option>
+                <option value="Standard">Standard</option>
+                <option value="High">High</option>
+            </select>
 
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required placeholder="Enter quantity">
 
+            <label for="file-upload">Upload File:</label>
+            <input type="file" id="file-upload" name="file-upload" required>
 
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-right: 40px;
-}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
-nav ul li {
-    margin-left: 15px;
-}
+    <script>
+    document.querySelector("#orderForm").addEventListener("submit", function (event) {
+        event.preventDefault();
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
+        const orderData = {
+            name: document.querySelector("input[name='name']").value,
+            phone: document.querySelector("input[name='phone']").value,
+            pageSize: document.querySelector("select[name='page-size']").value,
+            inkType: document.querySelector("select[name='ink-type']").value,
+            quantity: document.querySelector("input[name='quantity']").value,
+            quality: document.querySelector("select[name='quality']").value,
+            orderType: "Pickup" 
+        };
 
-.order-container {
-    max-width: 500px;
-    margin: auto;
-    margin-top: 60px; 
-    background: #222; 
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    color: #fff; 
-}
+        const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
 
-h1 {
-    text-align: center;
-    color: #fff; 
-}
+        existingOrders.push(orderData);
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+        localStorage.setItem("orders", JSON.stringify(existingOrders));
 
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #fff; 
-}
-
-input,
-select,
-textarea,
-button {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #555; 
-    border-radius: 5px;
-    background-color: #333; 
-    color: #fff; 
-}
-
-input[type="file"] {
-    padding: 5px;
-}
-
-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 18px; 
-    padding: 15px; 
-    border-radius: 8px; 
-}
-
-button:hover {
-    background-color: #0056b3;
-}
+        alert("Order saved!");
+        window.location.href = "PickupComplete.html";
+    });
+</script>
+</body>
+</html>
