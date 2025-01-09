@@ -1,4 +1,4 @@
-/* General Body Styling */
+
 body {
     background-color: #000;
     font-family: sans-serif;
@@ -7,7 +7,7 @@ body {
     color: #fff;
 }
 
-/* Header Styling */
+
 .header {
     background-color: #111;
     display: flex;
@@ -25,7 +25,7 @@ body {
     margin-top: 100px;
 }
 
-/* Logo Section */
+
 .logo {
     display: flex;
     align-items: center;
@@ -41,56 +41,13 @@ body {
     font-weight: bold;
 }
 
-/* Search Bar */
-.search-bar {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
 
-.search-bar input {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #555;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
-    outline: none;
-    width: 250px;
-    transition: border-color 0.3s ease;
-}
-
-.search-bar input::placeholder {
-    color: #888;
-}
-
-.search-bar input:focus {
-    border-color: #007BFF;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-.search-bar button {
-    padding: 8px;
-    font-size: 14px;
-    background-color: white;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 50px;
-    transition: background-color 0.3s ease;
-}
-
-.search-bar button:hover {
-    background-color: #0056b3;
-}
-
-/* Navigation */
 nav ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-right: 40px;
 }
 
 nav ul li {
@@ -102,7 +59,7 @@ nav a {
     text-decoration: none;
 }
 
-/* Pages */
+
 .page {
     display: none;
 }
@@ -111,18 +68,40 @@ nav a {
     display: block;
 }
 
-/* Form Styles */
+
+.page {
+    padding-top: 50px; 
+}
+ h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.order-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); 
+    width: 100%;
+    text-align: center;
+}
+
 form {
-    max-width: 400px;
+    width: 80%;
+    max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1rem;
 }
 
 label {
     font-weight: bold;
-    margin-bottom: 0.1px;
+    margin-bottom: 1px;
 }
 
 input,
@@ -155,7 +134,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Payment Details */
+
 #payment-details {
     margin-top: 10px;
 }
@@ -166,9 +145,11 @@ button:hover {
     margin-top: 10px;
 }
 
-/* Order Complete Section */
+
 .order-complete {
     text-align: center;
+    margin-top: 100px; 
+    padding-top: 20px; 
 }
 
 .order-complete h1 {
@@ -181,19 +162,89 @@ button:hover {
     margin-bottom: 10px;
 }
 
-.order-complete button {
-    background-color: #28a745;
+.order-complete a {
+    background-color: #28a745;/* General Section Styling */
+.page h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Form Container */
+.order-container,
+.location-container {
+    background-color: #1c1c1c; /* Darker background for the form area */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px;
+    width: 80%;
+    max-width: 400px; /* Max width to center align form */
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Slight shadow for a modern look */
+}
+
+/* Form Fields */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #bbb; /* Light gray text */
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border: 2px solid #007bff; /* Blue border on focus */
+}
+
+form button {
+    background-color: #007bff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .order-container,
+    .location-container {
+        width: 90%;
+    }
+}
     padding: 15px;
     font-size: 18px;
     border-radius: 8px;
+    color: white;
+    text-decoration: none;
     margin-top: 20px;
+    display: inline-block;
 }
 
-.order-complete button:hover {
+.order-complete a:hover {
     background-color: #218838;
 }
 
-/* Adjustments for Smaller Screens */
+
 @media (max-width: 600px) {
     .search-bar input {
         width: 150px;
